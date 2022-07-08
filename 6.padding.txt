@@ -1,0 +1,185 @@
+<html>
+<head><title>Padding</title>
+<link rel="stylesheet" href="D:\CSS\CSS external styles\h1.css">
+<link rel="stylesheet" href="D:\CSS\CSS external styles\h2.css">
+<style>
+#note{
+	color:red;
+	background-color:yellow;
+}
+#syntax{
+	background-color:cyan;
+}
+
+#one {
+  border: 1px solid black;
+  background-color: lightblue;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+#two {
+  border: 1px solid black;
+  padding: 25px 50px 75px 100px;
+  background-color: lightblue;
+}
+#three {
+  border: 1px solid black;
+  padding: 25px 50px 75px 100px;
+  background-color: lightblue;
+}#four {
+  border: 1px solid black;
+  padding: 25px 50px 75px 100px;
+  background-color: lightblue;
+}
+#five {
+  border: 1px solid black;
+  padding: 25px 50px 75px 100px;
+  background-color: lightblue;
+}
+div.six {
+  width: 300px;
+  padding: 25px;
+  background-color: lightblue;
+}
+div.ex1 {
+  width: 300px;
+  background-color: orange;
+}
+
+div.ex2 {
+  width: 300px;
+  background-color: yellow;
+}
+
+div.seven {
+  width: 300px;
+  padding: 25px;
+  box-sizing: border-box;
+  background-color: lightblue;
+}
+
+</style>
+</head>
+<body>
+	<h1><u><center>Padding</center></u></h1>
+		<p>The CSS padding properties are used to generate space around an element's content, inside of 
+		any defined borders.With CSS, you have full control over the padding. There are properties for setting 
+		the padding for each side of an element (top, right, bottom, and left).</p>
+	
+	<h2><u>Padding - Individual Sides</u></h2>
+		<p>CSS has properties for specifying the padding for each side of an element:<br>
+
+			<li>padding-top</li>
+			<li>padding-right</li>
+			<li>padding-bottom</li>
+			<li>padding-left</li><br>
+		All the padding properties can have the following values:<br>
+
+		<li>length - specifies a padding in px, pt, cm, etc.</li>
+		<li>% - specifies a padding in % of the width of the containing element</li>
+		<li>inherit - specifies that the padding should be inherited from the parent element</li></p>
+		<p id="syntax">the syntaxfor the individual padding was:<br>
+			selector{<br>
+				padding-top:sizepx;<br>
+				padding-bottom:sizepx;<br>
+				padding-left:sizepx;<br>
+				padding-right:sizepx;<br>
+				}<br>
+		
+
+			<div id="one">
+				this div element has a top padding of 50px, a right padding of 30px, 
+				a bottom padding of 50px, and a left padding of 80px.
+			</div><hr><hr>
+
+
+	
+	<h2><u>Padding - Shorthand Property</u></h2>
+			<p>To shorten the code, it is possible to specify all the padding properties in one property.</p>
+			
+			<h3>If the padding property has four values:</h3>
+			padding: 25px 50px 75px 100px;
+			<li>top padding is 25px</li>
+			<li>right padding is 50px</li>
+			<li>bottom padding is 75px</li>
+			<li>left padding is 100px</li>
+			<div id="two">
+				This div element has a top padding of 25px, a right padding of 50px,
+				 a bottom padding of 75px, and a left padding of 100px.
+			</div>
+
+	<h3>If the padding property has three values:</h3>
+			padding: 25px 50px 100px;
+			<li>top padding is 25px</li>
+			<li>right and left paddings are 50px</li>
+			<li>left padding is 100px</li>
+			<div id="three">
+				This div element has a top padding of 25px, 
+				a right and left padding of 50px, and a bottom padding of 75px.
+			</div>
+
+	<h3>If the padding property has two values:</h3>
+			padding: 25px 50px;
+			<li>top and bottom paddings are 25px</li>
+			<li>right and left paddings are 50px</li>
+			<div id="four">
+				This div element has a top and bottom padding of 25px,
+				and a right and left padding of 50px
+			</div>
+	
+
+	<h3>If the padding property has only one value:</h3>
+			padding: 25px;
+			<li>all sides are 25px</li>
+			<div id="five">
+				This div element has a top, bottom, left, and right padding of 25px.
+			</div>
+
+			<p id="note"><u>Note:</u>Here we cannot use negitive values </p><hr><hr>
+	
+	
+
+	<h2><u>Padding and Element Width</u></h2>
+		<p>The CSS width property specifies the width of the element's content area. 
+		The content area is the portion inside the padding, border, and margin of an element.<br>
+		So, if an element has a specified width, the padding added to that element will be added 
+		to the total width of the element. This is often an undesirable result.</p>
+		<h3>Example:</h3>
+			<p>Here, the &ltdiv&gt element is given a width of 300px. However, 
+			the actual width of the &ltdiv&gt element will be 350px 
+			(300px + 25px of left padding + 25px of right padding):</p>
+			
+			<div class="ex1">This div is 300px wide.</div>
+			<br>
+			<div class="six">
+				the width of this div is 350px, even though it is defined as 300px in the CSS.
+ 			</div><hr><hr>
+
+	<h2><u>Box-sizing property</u></h2>
+
+			<p>By using the box-sizzing property we can maintain the element its actual width; 
+			if you increase the padding, the available content space will decrease.</p>
+			
+
+			<div class="ex2">
+				This div is 300px wide.
+			</div>
+			<br>
+
+			<div class="seven">
+				The width of this div remains at 300px, in spite of the 50px of total left and right padding, 
+				because of the box-sizing: border-box property.
+			</div>
+
+
+			<hr><center>****************************************</center><hr>
+	
+
+
+
+
+
+</body>
+</html>
